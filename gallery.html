@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Opanyin Emmanuel Osei Owusu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-hero">
+    <div class="hero-parallax"></div>
+    <div class="container hero-inner">
+      <div class="hero-photo" aria-hidden="true"><img src="images/hero.1.jpg" alt="OPANYIN EMMANUEL OSEI OWUSU"></div>
+      <div>
+        <h1>OPANYIN EMMANUEL OSEI OWUSU</h1>
+        <h2>(Agya Wusu / Kofi Wusu)</h2>
+        <p class="lead">Celebration of Life ||  Age 83 || Sunday, November 30 2025 || Jubilee Park, Koforidua</p>
+        <nav class="top-nav" aria-label="Primary"><a href="index.html#program">Order of Service</a><a href="tributes.html#tributes">Tributes</a><a href="#gallery">Gallery</a></nav>
+      </div>
+    </div>
+  </header>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fdf7f0;
+    color: #2c1a09;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  #gallery.card.full {
+    padding: 2rem;
+    border-radius: 16px;
+    background: linear-gradient(
+      rgba(245, 235, 220, 0.85),
+      rgba(240, 225, 200, 0.9)
+    );
+    border: 3px solid #b58a54;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+  }
+
+  #gallery h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .frame-photo {
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 3px solid #c8a56b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .frame-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+  }
+
+  .frame-photo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .frame-photo:hover img {
+    transform: scale(1.08);
+  }
+
+  /* Fade in animation */
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  [data-animate].visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+</style>
+</head>
+<body>
+
+<main class="container">
+  <section id="gallery" class="card full" data-animate>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <a class="frame-photo" href="#"><img src="images/hero.1.jpg" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/drip.jpg" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/hero.jpg" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/cake.jpg" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/dad.jpg" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/pose.jpg" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/daa.png" alt="photo placeholder"></a>
+      <a class="frame-photo" href="#"><img src="images/black and white.jpg" alt="photo placeholder"></a>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Fade in animation
+  document.addEventListener("DOMContentLoaded", function() {
+    const animated = document.querySelectorAll("[data-animate]");
+    animated.forEach(section => {
+      section.classList.add("visible");
+    });
+  });
+</script>
+
+</body>
+</html>
+
