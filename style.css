@@ -5,8 +5,19 @@ body {
   background: #f8f6f2;
   color: #333;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Container used in tributes.html */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* HERO / HEADER */
 .header-hero {
   position: relative;
   height: 95vh;
@@ -15,19 +26,23 @@ body {
   background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.55)), url("images/hero.1.jpg") center center / cover no-repeat;
   border-bottom: 18px solid #c9a24a;
   animation: fadeIn 1.4s ease;
+  padding: 2rem 0;
 }
 
 .hero-inner {
-  width: 90 percent;
+  width: 90%;
   max-width: 1200px;
   margin: auto;
   display: flex;
   gap: 40px;
   align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .hero-photo img {
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   height: auto;
   border-radius: 14px;
   border: 6px solid #c9a24a;
@@ -35,19 +50,26 @@ body {
   animation: floatImg 6s ease-in-out infinite;
 }
 
+/* Keyframes fixed syntax */
 @keyframes floatImg {
-  0 percent {transform: translateY(0);} 50 percent {transform: translateY(-10px);} 100 percent {transform: translateY(0);} }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
 
+/* Headings & typography */
 h1 {
   font-size: 3rem;
   font-weight: 700;
   color: #f4efe4;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.05;
 }
 
 h2 {
   font-size: 1.5rem;
   color: #f4e2b8;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .lead {
@@ -56,6 +78,7 @@ h2 {
   margin-bottom: 24px;
 }
 
+/* Top nav */
 .top-nav a {
   margin-right: 18px;
   color: white;
@@ -65,22 +88,27 @@ h2 {
 }
 
 .top-nav a:hover {
-  opacity: .7;
+  opacity: .8;
   letter-spacing: 1px;
 }
 
+/* Card base */
 .card {
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 14px;
   border: 2px solid #ead8ad;
   box-shadow: 0 6px 20px rgba(0, 0, 0, .07);
   animation: fadeInUp 1.2s ease;
+  box-sizing: border-box;
 }
 
 @keyframes fadeInUp {
-  from {opacity: 0; transform: translateY(25px);} to {opacity: 1; transform: translateY(0);} }
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
+/* Section title style */
 .section-title h2 {
   font-weight: 700;
   font-size: 2.1rem;
@@ -92,7 +120,7 @@ h2 {
   padding-bottom: 6px;
 }
 
-/* African ornamental border */
+/* African ornamental border for program card (unchanged) */
 .card.program {
   background-image: url("images/african-pattern.png");
   background-size: 120px;
@@ -101,6 +129,7 @@ h2 {
   padding-top: 100px;
 }
 
+/* Pre code block */
 pre {
   background: #f8f4ec;
   padding: 30px;
@@ -110,6 +139,7 @@ pre {
   white-space: pre-wrap;
 }
 
+/* Buttons */
 .btn {
   padding: 12px 32px;
   background: #c9a24a;
@@ -126,6 +156,7 @@ pre {
   transform: translateY(-3px);
 }
 
+/* Back to top button */
 #backToTop {
   position: fixed;
   bottom: 20px;
@@ -135,7 +166,7 @@ pre {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 50 percent;
+  border-radius: 50%;
   font-size: 22px;
   display: none;
   box-shadow: 0 6px 15px rgba(0, 0, 0, .25);
@@ -146,18 +177,40 @@ pre {
   transform: translateY(-3px);
 }
 
+/* Fade-in base keyframe */
 @keyframes fadeIn {
-  from {opacity: 0;} to {opacity: 1;} }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  .tribute-item {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
+/* -------- TRIBUTES SECTION (fixed & consolidated) -------- */
+
+/* Container for tributes section */
+#tributes {
+  border: 3px solid transparent;
+  padding: 1rem;
+  border-image: repeating-linear-gradient(
+    45deg,
+    #8b5d2e,
+    #8b5d2e 8px,
+    #d6b075 8px,
+    #d6b075 16px
+  ) 6;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,244,234,0.95));
+  box-sizing: border-box;
+}
+
+/* Tribute item */
+.tribute-item {
+  border-bottom: 1px solid #e0d6c2;
+  padding: 1rem 0;
   margin-bottom: 1rem;
 }
 
-/* Button Styling */
+/* Tribute toggle button (consolidated and corrected) */
 .tribute-toggle {
-  width: 100 percent;
+  width: 100%;
   text-align: left;
   padding: 0.9rem 1.2rem;
   font-size: 1.05rem;
@@ -165,81 +218,15 @@ pre {
   cursor: pointer;
   border: none;
   border-radius: 10px;
-
-  background: linear-gradient(
-    rgba(230, 195, 120, 0.95),
-    rgba(210, 165, 95, 0.95)
-  );
-  background-blend-mode: multiply;
-
-  color: #2c1a09;
-
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
-
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.15) 0,
-      rgba(255, 255, 255, 0.15) 4px,
-      rgba(0, 0, 0, 0.05) 4px,
-      rgba(0, 0, 0, 0.05) 8px
-    );
-}
-
-.tribute-toggle:hover {
-  background: linear-gradient(
-    rgba(245, 210, 140, 1),
-    rgba(225, 175, 105, 1)
-  );
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
-}
-
-.tribute-toggle:active {
-  transform: scale(0.98);
-}
-
-/* Content animation */
-.tribute-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 0.5rem;
-}
-
-.tribute-content.open {
-  padding: 1rem 0.5rem;
-  max-height: 800px;
-}
-
-.tribute-item {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Button Layout */
-.tribute-toggle {
-  width: 100 percent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 1rem 1.2rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-
-  border: none;
-  border-radius: 10px;
 
   background: linear-gradient(
     rgba(233, 198, 128, 0.95),
     rgba(210, 165, 95, 0.95)
   );
+  background-blend-mode: multiply;
 
   color: #2c1a09;
 
@@ -257,7 +244,6 @@ pre {
     );
 }
 
-/* Hover */
 .tribute-toggle:hover {
   background: linear-gradient(
     rgba(245, 210, 140, 1),
@@ -267,43 +253,41 @@ pre {
   transform: translateY(-2px);
 }
 
-/* Arrow Rotation */
+.tribute-toggle:active {
+  transform: scale(0.98);
+}
+
+/* Arrow rotation */
 .tribute-toggle .arrow {
   font-size: 1.1rem;
   transition: transform 0.3s ease;
 }
 
-.tribute-toggle.open .arrow {
+.tribute-toggle.open .arrow,
+.tribute-toggle .arrow.rotate {
   transform: rotate(90deg);
 }
 
-/* Content animation */
+/* Tribute content collapse/expand (consolidated) */
 .tribute-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.45s ease, padding 0.3s ease;
   padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .tribute-content.open {
   padding: 1rem 0.5rem;
-  max-height: 800px;
+  max-height: 1200px; /* generous limit for long tributes */
 }
 
-/* Optional Adinkra pattern border for tribute section */
-#tributes {
-  border: 3px solid transparent;
-  padding: 1rem;
-  border-image: repeating-linear-gradient(
-    45deg,
-    #8b5d2e,
-    #8b5d2e 8px,
-    #d6b075 8px,
-    #d6b075 16px
-  ) 6;
-  border-radius: 12px;
+/* Scrollable content when constrained in the HTML internal styles — keep behavior predictable */
+.tribute-content.scrollable {
+  overflow-y: auto;
 }
 
+/* Photos row */
 .photos-row {
   display: flex;
   align-items: center;
@@ -314,25 +298,114 @@ pre {
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(210, 170, 120, 0.4);
+  flex-wrap: wrap;
 }
 
 .tribute-photo {
   width: 250px;
-  height: 300px;
+  max-width: 40%;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .photo-caption {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #3b2a13;
   padding: 0.4rem 0.8rem;
   background: rgba(255, 245, 225, 0.8);
   border-radius: 8px;
-
   border-left: 4px solid #c49a60;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
 }
 
+/* Quick info aside tweaks */
+.quick-info h3 {
+  margin-top: 0;
+}
+
+.muted {
+  color: #6a5b44;
+  margin: .3rem 0;
+}
+
+/* Layout grid (if used by page) - kept here for global styling consistency */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* small screens: single column layout */
+@media (max-width: 900px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    gap: 20px;
+  }
+
+  .hero-photo {
+    flex: 0 0 35%;
+    max-width: 240px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* narrow phones */
+@media (max-width: 480px) {
+  .header-hero {
+    height: auto;
+    padding: 2.5rem 0;
+  }
+
+  .hero-inner {
+    width: 95%;
+    gap: 16px;
+    padding: 0 8px;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .photo-caption {
+    font-size: 1rem;
+  }
+
+  .tribute-photo {
+    width: 140px;
+    max-width: 40%;
+  }
+}
+
+/* Accessibility and small utility tweaks */
+button.tribute-toggle:focus {
+  outline: 3px solid rgba(201,162,74,0.45);
+  outline-offset: 3px;
+}
+
+a.btn:focus {
+  outline: 3px solid rgba(201,162,74,0.45);
+  outline-offset: 3px;
+}
