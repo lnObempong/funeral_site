@@ -85,7 +85,6 @@
     transform: scale(1.08);
   }
 
-  /* Fade in animation */
   [data-animate] {
     opacity: 0;
     transform: translateY(20px);
@@ -95,6 +94,75 @@
   [data-animate].visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* ------------------------------ */
+  /* RESPONSIVENESS ADDED BELOW    */
+  /* ------------------------------ */
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.2rem;
+    }
+
+    #gallery.card.full {
+      padding: 1.2rem;
+    }
+
+    #gallery h2 {
+      font-size: 1.6rem;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .header-hero .hero-inner {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .hero-photo img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      margin: auto;
+    }
+
+    nav.top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    nav.top-nav a {
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background: #e8d8c4;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #gallery h2 {
+      font-size: 1.4rem;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .hero-photo img {
+      width: 150px;
+    }
+
+    .container {
+      padding: 1rem;
+    }
   }
 
 </style>
@@ -118,7 +186,6 @@
 </main>
 
 <script>
-  // Fade in animation
   document.addEventListener("DOMContentLoaded", function() {
     const animated = document.querySelectorAll("[data-animate]");
     animated.forEach(section => {
@@ -129,4 +196,3 @@
 
 </body>
 </html>
-
