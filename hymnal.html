@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hymnal – Celebration Service</title>
+
+<!-- Embedded Styles -->
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f6f2;
+    margin: 0;
+    padding: 0;
+    color: #2d2a26;
+  }
+
+  /* ---------- NAVIGATION ---------- */
+  header {
+    background: #3a2a12;
+    padding: 1rem 0;
+    border-bottom: 4px solid #c9a24a;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  nav {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-brand {
+    color: #f8f4e8;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .5px;
+  }
+
+  .nav-links a {
+    margin-left: 1.4rem;
+    color: #f8f4e8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .3s, letter-spacing .3s;
+  }
+
+  .nav-links a:hover {
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+
+  /* mobile nav stack */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  /* ---------- PAGE CONTAINER ---------- */
+  .container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    color: #5a4724;
+    border-bottom: 3px solid #c9a24a;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+
+  /* ---------- ACCORDION ---------- */
+  .hymn-item {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background: white;
+    border: 2px solid #e8dab8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  }
+
+  .hymn-toggle {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(#f2d9a0, #d4ad63);
+    color: #2b1a0d;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background .3s ease, transform .2s ease;
+  }
+
+  .hymn-toggle:hover {
+    background: linear-gradient(#f7e2b8, #d9b776);
+    transform: translateY(-2px);
+  }
+
+  .arrow {
+    transition: transform .3s ease;
+    font-size: 1.2rem;
+  }
+
+  .arrow.rotate {
+    transform: rotate(90deg);
+  }
+
+  .hymn-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, padding .3s ease;
+    padding: 0 1rem;
+    background: #fffaf0;
+    border-top: 1px solid #e8dab8;
+  }
+
+  .hymn-content.open {
+    padding: 1rem;
+    max-height: 1000px;
+  }
+
+  .verses {
+    line-height: 1.7;
+    white-space: pre-wrap;
+    font-size: 1rem;
+  }
+
+  /* ---------- PAGE SCROLL AREA ---------- */
+  .scroll-area {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  /* Scrollbar styling */
+  .scroll-area::-webkit-scrollbar {
+    width: 7px;
+  }
+  .scroll-area::-webkit-scrollbar-thumb {
+    background: #c9a24a;
+    border-radius: 12px;
+  }
+  /* ---------- FOOTER ---------- */
+  footer {
+    margin-top: 2rem;
+    background: #3a2a12;
+    padding: 2rem 0;
+    border-top: 4px solid #c9a24a;
+  }
+
+  .footer-inner {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    color: #f8f4e8;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: #e8dab3;
+    margin-top: 1.8rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ========== NAVIGATION BAR ========== -->
+<header>
+  <nav>
+    <a class="nav-brand" href="index.html">Funeral Service</a>
+
+    <div class="nav-links">
+      <a href="index.html#program">Order of Service</a>
+      <a href="tributes.html">Tributes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="hymnal.html">Hymnal</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== PAGE CONTENT ========== -->
+<div class="container">
+  <h1>HYMNAL</h1>
+
+  <div class="scroll-area">
+
+    <!-- HYMN 445 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        SDAH 445 – I'm But a Stranger Here
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1  
+I’m but a stranger here,  
+Heav’n is my home;  
+Earth is a desert drear,  
+Heav’n is my home.  
+Danger and sorrow stand  
+Round me on every hand;  
+Heav’n is my fatherland,  
+Heav’n is my home.  
+
+2  
+What though the tempest rage,  
+Heav’n is my home;  
+Short is my pilgrimage,  
+Heav’n is my home;  
+And time’s wild wintry blast  
+Soon shall be over past;  
+I shall reach home at last,  
+Heav’n is my home.  
+
+3  
+There at my Savior’s side  
+Heav’n is my home;  
+I shall be glorified,  
+Heav’n is my home;  
+There are the good and blest,  
+Those I love most and best;  
+And there I, too, shall rest,  
+Heav’n is my home.  
+        </div>
+      </div>
+    </div>
+
+    <!-- HYMN 441 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        SDAH 441 – I Saw One Weary
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1
+I saw one weary, sad, and torn,
+With eager steps press on the way,
+Who long the hallowed cross had born,
+Still looking for the promised day;
+While many a line of grief and care,
+Upon his brow was furrowed there;
+I asked what buoyed his spirits up,
+“O this” said he-“the blessed hope.”
+2
+And one I saw, with sword and shield,
+Who boldly braved the world’s cold frown,
+And fought, unyielding, on the field,
+To win an everlasting crown.
+Though worn with toil, oppressed by foes,
+No murmur from his heart arose;
+I asked what buoyed his spirits up,
+“O this!” said he-“the blessed hope.”
+3
+And there was one who left behind
+The cherished friends of early years,
+And honor, pleasure, wealth re-signed,
+To tread the path bedewed with tears.
+Through trials deep and conflict sore,
+Yet still a smile of joy he wore;
+O! what can bouy the spirit up?
+‘Tis this alone-the blessed hope.
+4
+While pilgrims here we journey on
+In this dark vale of sin and gloom,
+Through tribulation, hate, and scorn,
+Or through the portals of the tomb,
+Till our returning King shall come
+To tkae His exile captives home,
+O! what can bouy the spirits up?
+‘Tis this alone– the blessed hope.
+
+        </div>
+      </div>
+    </div>
+
+    <!-- HYMN 50 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        SDAH 50 – Abide With Me
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1
+Abide with me; fast falls the eventide;
+The darkness deepens; Lord with me abide!
+When other helpers fail and comforts flee,
+Help of the helpless, O abide with me.
+2
+Swift to its close ebbs out life’s little day;
+Earth’s joys grow dim; its glories pass away;
+Change and decay in all around I see;
+O Thou who changest not, abide with me.
+3
+I need Thy presence every passing hour.
+What but Thy grace can foil the tempter’s power?
+Who, like Thyself, my guide and stay can be?
+Through cloud and sunshine, Lord, abide with me.
+4
+I fear no foe, with Thee at hand to bless;
+Ills have no weight, and tears no bitterness.
+Where is death’s sting? Where, grave, thy victory?
+I triumph still, if Thou abide with me!
+  
+        </div>
+      </div>
+    </div>
+
+    <!-- HYMN 523 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        SDAH 523 – My Faith Has Found a Resting Place
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1
+My faith has found a resting place,
+Not in a manmade creed;
+I trust the ever living One,
+That He for me shall plead.
+Refrain
+I need no other evidence,
+I need no other plea;
+It is enough that Jesus died,
+And rose again for me.
+2
+Enough for me that Jesus saves,
+This ends my fear and doubt;
+A sinful soul, I come to Him,
+He will not cast me out.
+3
+My soul is resting on the Word,
+The living Word of God,
+Salvation in my Savior’s name,
+Salvation through His blood.
+4
+My great Physician heals the sick,
+The lost He came to save;
+For me His precious blood He shed,
+For me His life He gave.
+
+        </div>
+      </div>
+    </div>
+
+    <!-- HYMN 450 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        SDAH 450 – Beautiful Zion
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1
+Beautiful Zion, built above,
+Beautiful city that I love,
+Beautiful gates of pearly white,
+Beautiful temple, God its light.
+2
+Beautiful trees forever there,
+Beautiful fruit they always bear,
+Beautiful rivers gliding by,
+Beautiful fountains never dry.
+3
+Beautiful crowns on every brow,
+Beautiful palms the conquerors show,
+Beautiful robes the ransomed wear,
+Beautiful all who enter there.
+ 
+        </div>
+      </div>
+    </div>
+
+    <!-- HYMN 530 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        530 – It Is Well
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1
+When peace, like a river, attendeth my way,
+when sorrows like sea billows roll;
+whatever my lot, thou hast taught me to say,
+It is well, it is well with my soul.
+
+Refrain
+It is well with my soul,
+it is well, it is well with my soul.
+
+2
+My sin–oh, the joy of this glorious thought–
+My sin, not in part but the whole,
+is nailed to the cross, and I bear it no more,
+praise the Lord, praise the Lord, O my soul!
+
+3
+And, Lord, haste the day when my faith shall be sight,
+the clouds be rolled back as a scroll;
+the trump shall resound, and the Lord shall descend,
+even so, it is well with my soul.  
+        </div>
+      </div>
+    </div>
+
+    <!-- HYMN 428 -->
+    <div class="hymn-item">
+      <button class="hymn-toggle">
+        428 – Sweet By and By
+        <span class="arrow">&#9656;</span>
+      </button>
+      <div class="hymn-content">
+        <div class="verses">
+1
+There’s a land that is fairer than day,
+And by faith we can see it afar;
+For the Father waits over the way
+To prepare us a dwelling place there.
+
+Refrain
+In the sweet in the sweet
+By and by by and by,
+We shall meet on that beautiful shore;
+In the sweet in the sweet
+By and by by and by
+We shall meet on that beautiful shore.
+
+2
+We shall sing on that beautiful shore
+The melodious songs of the blest,
+And our spirits shall sorrow no more
+Not a sigh for the blessing of rest.
+
+3
+To our bountiful father above
+We will offer our tribute of praise;
+For the glorious gift of His love
+And the blessings that hallow our days.  
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Accordion Logic -->
+<script>
+  const toggles = document.querySelectorAll(".hymn-toggle");
+
+  toggles.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const arrow = btn.querySelector(".arrow");
+
+      content.classList.toggle("open");
+      arrow.classList.toggle("rotate");
+    });
+  });
+</script>
+
+</body>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  
+  <div class="footer-bottom">
+    © 2025 Celebration of Life
+  </div>
+</footer>
+
+</html>
