@@ -143,6 +143,92 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
       transition: opacity .3s;
     }
+
+    /* Responsive adjustments */
+
+/* Reduce hero layout on tablets and phones */
+@media (max-width: 992px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-photo img {
+    width: 260px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .top-nav a {
+    margin-right: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .header-hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-inner {
+    width: 94 percent;
+  }
+
+  .hero-photo img {
+    width: 200px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  main.container {
+    width: 94 percent;
+    margin: 30px auto;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  pre {
+    padding: 20px;
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .top-nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}
+
   </style>
 </head>
 <body>
