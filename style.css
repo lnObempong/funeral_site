@@ -409,3 +409,29 @@ a.btn:focus {
   outline: 3px solid rgba(201,162,74,0.45);
   outline-offset: 3px;
 }
+/* ---------- FOOTER ---------- */
+  footer {
+    margin-top: 2rem;
+    background: #3a2a12;
+    padding: 2rem 0;
+    border-top: 4px solid #c9a24a;
+  }
+
+  .footer-inner {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    color: #f8f4e8;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: #e8dab3;
+    margin-top: 1.8rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
