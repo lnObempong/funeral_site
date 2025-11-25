@@ -7,6 +7,81 @@
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Responsive Tribute Scroll Sections --- */
+    .tribute-content {
+      max-height: 350px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .tribute-content {
+        max-height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tribute-content {
+        max-height: 250px;
+      }
+    }
+
+    /* Ensure layout remains intact */
+    .card {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tribute-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .tribute-toggle {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 10px 0;
+    }
+
+    .tribute-content {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .tribute-content.open {
+      display: block;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+  </style>
 </head>
 
 <body>
@@ -42,6 +117,8 @@
       <h2>Tributes</h2>
 
       <!-- Tribute Accordion Component -->
+
+      <!-- Koforidua Central SDA Church -->
       <div class="tribute-item">
         <button class="tribute-toggle">
           <span class="label-text">Koforidua Central SDA Church</span>
@@ -61,18 +138,19 @@ It was therefore fitting that this church honored him with a great citation in h
 
 As a church, we affirm with hope: “Blessed are the dead who die in the Lord… they rest from their labor, and their works follow them” (Revelation 14:13). Indeed, Opanin Wusu’s works follow him, and his example of faithfulness will continue to inspire generations yet to come.
 Farewell, good and faithful servant. Until the resurrection morning, rest in peace, Opanin Emmanuel Osei Owusu.
-
           </blockquote>
         </div>
       </div>
 
+      <!-- Grandchildren & Great-grandchildren -->
       <div class="tribute-item">
         <button class="tribute-toggle">
           <span class="label-text">Grandchildren and Great-grandchildren</span>
           <span class="arrow">&#9656;</span>
         </button>
         <div class="tribute-content">
-          <blockquote>We stand today with a deep sense of gratitude for the precious, God-given life of our grandfather, Opanyin Emmanuel Osei Owusu—the man we affectionately called Dada.
+          <blockquote>
+We stand today with a deep sense of gratitude for the precious, God-given life of our grandfather, Opanyin Emmanuel Osei Owusu—the man we affectionately called Dada.
 Dada was a man whose strength wasn't loud; it was deep and quiet. He embodied the best of human qualities: humble, peaceful, and overflowing with unconditional love. He never sought the spotlight, yet his life was a light that profoundly touched every one of us. His gentle manner was our most enduring lesson in living a life marked by kindness, unwavering patience, and deep faith.
 Da was, quite simply, our anchor. His presence was a constant, comforting assurance throughout our lives.
 We grew up shielded by his prayers, guided by his wise words, and surrounded by his boundless love. No matter the challenge or the celebration, Da was our steady hand, our safe harbor, and a comforting presence in every season. We are eternally thankful for every blessing his exemplary life brought to ours.
@@ -83,32 +161,36 @@ Rest in perfect peace, Da. You fought the good fight and ran your race with grac
         </div>
       </div>
 
+      <!-- In-laws -->
       <div class="tribute-item">
         <button class="tribute-toggle">
           <span class="label-text">In-Laws</span>
           <span class="arrow">&#9656;</span>
         </button>
         <div class="tribute-content">
-          <blockquote>We wish you were alive to hear these testaments. The question is, what would it profit the dead when we shower praises upon him? We know this will not impact your life; we should have sung your praises while you were alive. However, we understand that we are singing and reciting your praises and testament today to edify ourselves, draw strength from your legacy, and find inspiration in your remarkable life, for "a wise man's heart discerns both time and judgment" (Ecclesiastes 8:5). 
-Agya Owusu, your legacy lives on through the countless lives you touched and has become a yardstick and testament for us today. Your warm smile and open door welcomed everyone, creating a sense of belonging and love that transcended family ties. Your simplicity and humility inspired us to live life with purpose and kindness, showing us that true greatness lies in serving others. 
-We remember your gentle guidance, your listening ear, and your generous heart, which always seemed to find a way to make everyone feel seen and heard. You showed us that true strength lies in compassion, calmness, simplicity, patience, empathy, and understanding. You never rushed to talk; instead, you listened more and spoke less, which made you a repository of knowledge and wisdom. 
-As the African proverb goes, "A tree is reflected by its fruit," and your children, thus, our wives and husbands, have borne fruit in their lives, reflecting the values and character you instilled in them. Your fairness and impartiality were remarkable; you never took sides or favored one over the other, always seeking to understand each perspective. Your wisdom and balanced perspective helped us navigate family and marriage conflicts, and we deeply respect your approach, which was always guided by a deep sense of justice and compassion. 
-Though you are gone, your humane, resolute, and finest approach to resolving family and marriage conflicts lingers on, a testament to the enduring power of your legacy. Indeed, you may be gone, but you will live on for years to come, in the hearts of those who knew you and in the lessons you taught us. As another African proverb says, "When the parent's house is clean, the children's house will be clean," and your legacy has set a high standard for us to follow. 
+          <blockquote>
+We wish you were alive to hear these testaments. The question is, what would it profit the dead when we shower praises upon him? We know this will not impact your life; we should have sung your praises while you were alive. However, we understand that we are singing and reciting your praises and testament today to edify ourselves, draw strength from your legacy, and find inspiration in your remarkable life, for "a wise man's heart discerns both time and judgment" (Ecclesiastes 8:5).
+Agya Owusu, your legacy lives on through the countless lives you touched and has become a yardstick and testament for us today. Your warm smile and open door welcomed everyone, creating a sense of belonging and love that transcended family ties. Your simplicity and humility inspired us to live life with purpose and kindness, showing us that true greatness lies in serving others.
+We remember your gentle guidance, your listening ear, and your generous heart, which always seemed to find a way to make everyone feel seen and heard. You showed us that true strength lies in compassion, calmness, simplicity, patience, empathy, and understanding. You never rushed to talk; instead, you listened more and spoke less, which made you a repository of knowledge and wisdom.
+As the African proverb goes, "A tree is reflected by its fruit," and your children, thus, our wives and husbands, have borne fruit in their lives, reflecting the values and character you instilled in them. Your fairness and impartiality were remarkable; you never took sides or favored one over the other, always seeking to understand each perspective. Your wisdom and balanced perspective helped us navigate family and marriage conflicts, and we deeply respect your approach, which was always guided by a deep sense of justice and compassion.
+Though you are gone, your humane, resolute, and finest approach to resolving family and marriage conflicts lingers on, a testament to the enduring power of your legacy. Indeed, you may be gone, but you will live on for years to come, in the hearts of those who knew you and in the lessons you taught us. As another African proverb says, "When the parent's house is clean, the children's house will be clean," and your legacy has set a high standard for us to follow.
 We testify that your presence in our lives as in-laws brought a wave of rich and memorable experiences. Yet, one in particular stands out, shared by one of us, Mr. Ayisi Gyekye. He recalls:
-“As I was about to marry Rachael, I recalled the wise saying, "When you are going into marriage, ask." This resonated deeply with me, and I realized that your family's values and character were a significant part of what I was marrying into. When I met a man who congratulated me on my upcoming wedding and asked about my bride-to-be's family, I mentioned your name, and his face lit up with delight. "You're lucky," he exclaimed, his happiness stemming from the knowledge that I was marrying into a household renowned for its warmth, peace, good moral values, and integrity.” 
-Agya Owusu, today the good moral precedence you set up is telling us that parents who, because of their moral decadence and bad parenting style, are casting a snare on their children's marriage and even preventing others from marrying from their family, should change the narrative from attributing their predicament to negative influences and rather consider their own actions. As the proverb goes, "A child who is not taught how to respect others will not respect others." Indeed, you taught your children and others the importance of respect, kindness, and compassion. 
-As we bid you farewell, dear father-in-law, we take comfort in the promise of a future reunion. And as the Bible says, 'For the trumpet will sound, and the dead will be raised imperishable, and we will be changed' (1 Corinthians 15:52). Until then, rest well, knowing that your legacy lives on in our hearts and will continue to inspire us to live lives of love, kindness, and compassion. May your memory be a blessing to us, and may we one day reunite in the presence of the 'Obolebole' (Almighty), where love and joy will be forever. When a great tree falls, its seeds remain, and so do the countless lives you've touched and the sweet memories we've shared. Amen! 
+“As I was about to marry Rachael, I recalled the wise saying, "When you are going into marriage, ask." This resonated deeply with me, and I realized that your family's values and character were a significant part of what I was marrying into. When I met a man who congratulated me on my upcoming wedding and asked about my bride-to-be's family, I mentioned your name, and his face lit up with delight. "You're lucky," he exclaimed, his happiness stemming from the knowledge that I was marrying into a household renowned for its warmth, peace, good moral values, and integrity.”
+Agya Owusu, today the good moral precedence you set up is telling us that parents who, because of their moral decadence and bad parenting style, are casting a snare on their children's marriage and even preventing others from marrying from their family, should change the narrative from attributing their predicament to negative influences and rather consider their own actions. As the proverb goes, "A child who is not taught how to respect others will not respect others." Indeed, you taught your children and others the importance of respect, kindness, and compassion.
+As we bid you farewell, dear father-in-law, we take comfort in the promise of a future reunion. And as the Bible says, 'For the trumpet will sound, and the dead will be raised imperishable, and we will be changed' (1 Corinthians 15:52). Until then, rest well, knowing that your legacy lives on in our hearts and will continue to inspire us to live lives of love, kindness, and compassion. May your memory be a blessing to us, and may we one day reunite in the presence of the 'Obolebole' (Almighty), where love and joy will be forever. When a great tree falls, its seeds remain, and so do the countless lives you've touched and the sweet memories we've shared. Amen!
           </blockquote>
         </div>
       </div>
 
+      <!-- Siblings -->
       <div class="tribute-item">
         <button class="tribute-toggle">
           <span class="label-text">Siblings</span>
           <span class="arrow">&#9656;</span>
         </button>
         <div class="tribute-content">
-          <blockquote>Brother Owusu is the name we used to call him. It is indeed a Herculean task to find words to describe his nature, for we may understate his virtues. In fact, on the ladder of perfection, no human is perfect, but Mr. Owusu could be considered a superhuman being under any critical examination of his personality.
+          <blockquote>
+Brother Owusu is the name we used to call him. It is indeed a Herculean task to find words to describe his nature, for we may understate his virtues. In fact, on the ladder of perfection, no human is perfect, but Mr. Owusu could be considered a superhuman being under any critical examination of his personality.
 Apart from being a quiet man, he was a very respectful person—kindhearted and humble—and exhibited a high degree of humility toward all manner of people.
 Being born into a family of Adventists, he did well to walk in the path of righteousness, exhibiting Christ-like character, avoiding all forms of social vices, and tempting situations that could lure him to the devil’s bait.
 His love was not only to the family but extended to every human being, regardless of his or her status.
@@ -122,30 +204,32 @@ Brother Owusu, Nante yie!
         </div>
       </div>
 
+      <!-- Children -->
       <div class="tribute-item">
         <button class="tribute-toggle">
           <span class="label-text">Children</span>
           <span class="arrow">&#9656;</span>
         </button>
         <div class="tribute-content">
-          <blockquote>We gather today not only to mourn a loss but to celebrate the life of our father. A life marked not by grand titles or worldly accolades, but by quiet, relentless strength.
+          <blockquote>
+We gather today not only to mourn a loss but to celebrate the life of our father. A life marked not by grand titles or worldly accolades, but by quiet, relentless strength.
 Though words can never fully capture who he was or the depth of our loss, we will try — because he deserves to be remembered and honored.
-Agya Wusu, as he was affectionately called, was a man of modest beginnings, whose formal education may have stopped early, but whose schooling in resilience, discipline, and selflessness was lifelong. 
+Agya Wusu, as he was affectionately called, was a man of modest beginnings, whose formal education may have stopped early, but whose schooling in resilience, discipline, and selflessness was lifelong.
 With calloused hands and unwavering determination, he shaped a future far brighter than the one handed to him. No hardship was too heavy. No sacrifice was too great. He carried them all on his back if it meant his children could walk a smoother path.
- He worked through storms, through droughts, through hardship — pushing past pain and exhaustion, driven by a dream he held not for himself, but for us, so that we, his children, would never have to carry the same burden. Because to him, our future was everything.
+He worked through storms, through droughts, through hardship — pushing past pain and exhaustion, driven by a dream he held not for himself, but for us, so that we, his children, would never have to carry the same burden. Because to him, our future was everything.
 No matter how little was in his pocket, he made sure there was food on the table, that there were shoes on our feet, and love in our home. There was no sacrifice too great, no need of ours too small.
 Agya Wusu didn’t read from textbooks, yet he taught us lessons we’ll never forget:
 
-<p>●	That integrity matters more than recognition</p>
-<p>●	That consistency is more powerful than brilliance</p>
-<p>●	And that love—real love—is shown in action, not words</p>
+<p>● That integrity matters more than recognition</p>
+<p>● That consistency is more powerful than brilliance</p>
+<p>● And that love—real love—is shown in action, not words</p>
 
 He was the kind of man who didn’t speak of love often, but showed it every single day. He showed his love in the cracked hands that built our lives. He showed his love in the tired smile he wore after a long day in the field. In this way, he stood as both father and provider, never asking for thanks and never expecting praise.
 To many, he may have seemed an ordinary man. But to us — he was a giant. A hero. Our foundation.
 As we say goodbye, our hearts are heavy, but they are also full. Our hearts are full of the love he gave us, full of the lessons he taught us, our hearts are full of gratitude for the life he lived.
 Rest well, Daddy. Your work here is done. You may not have worn titles or earned degrees, but in our eyes, you were the greatest teacher, the strongest protector, and the kindest soul we’ve ever known.
 The Lord has called home a faithful servant. Dad’s journey on earth is complete, but his spirit rejoices in the presence of his Creator.
-Though his voice is no longer heard, the lessons he taught and the love he gave remain etched in our hearts. 
+Though his voice is no longer heard, the lessons he taught and the love he gave remain etched in our hearts.
 We will carry your legacy with pride. We will walk the paths you cleared for us. And we will honor you not only in memory, but in the way we live, in what we give, and in how we love.
 We grieve, but not without hope, for we know we will see him again in glory.
 Thank you.
@@ -153,13 +237,15 @@ Thank you.
         </div>
       </div>
 
+      <!-- Wife -->
       <div class="tribute-item">
         <button class="tribute-toggle">
           <span class="label-text">Wife</span>
           <span class="arrow">&#9656;</span>
         </button>
         <div class="tribute-content">
-          <blockquote>Ao, Kofi Wusu… hmm.
+          <blockquote>
+Ao, Kofi Wusu… hmm.
 My dear husband, my companion, my everything — how can I put into words the pain of losing you? Each day without you feels empty, each night unbearably long.
 You and I shared everything — our joys, our struggles, our laughter, and our faith. You were my partner in all things, and together we built a life of love and devotion.
 Now that all the children are married and living in their own homes, it was just the two of us left in this house — sharing laughter, stories, and companionship every day. And now, you too have gone, leaving me all alone. Who will I have conversations with when everyone is away? How could you not tell me it was time? Ah, death is such a cruel visitor.
